@@ -5,8 +5,20 @@
 }
 
 body{
-  background-image: linear-gradient(120deg, #31962e, #fda085);
+  background-image: linear-gradient(120deg, #31962e, #f1fd85);
   color: white;
   font-family: 'Poppins', sans-serif;
   min-height: 100vh;
 } 
+
+header{
+  font-size: 1.5rem;
+}
+
+header,
+form{
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
