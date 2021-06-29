@@ -30,3 +30,14 @@ form button{
   border: none;
   background: white;
 }
+
+form button{
+  color: #31962e;
+  background: white;
+  cursor: pointer;
+  transform: all 0.3s ease;
+}
+form button:hover{
+  background: #31962e;
+  color: white;
+}
