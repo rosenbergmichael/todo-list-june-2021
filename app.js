@@ -5,6 +5,12 @@ const todoList = document.querySelector('.todo-list');
 
 
 // Event Listeners
+todoButton.addEventListener('click', addTodo);
 
 
 // Functions
+
+const addTodo = (event) => {
+  event.preventDefault();
+
+}
