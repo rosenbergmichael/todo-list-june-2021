@@ -13,4 +13,12 @@ todoButton.addEventListener('click', addTodo);
 const addTodo = (event) => {
   event.preventDefault();
 
+  const todoDiv = document.createElement('div');
+  todoDiv.classList.add('todo');
+
+  const newTodo = document.createElement('li');
+  newTodo.innerText = 'hey';
+  newTodo.classList.add('todo-item');
+  todoDiv.appendChild(newTodo);
+
 }
