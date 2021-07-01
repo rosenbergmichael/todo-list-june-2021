@@ -31,4 +31,6 @@ const addTodo = (event) => {
   deleteButton.classList.add('delete-btn');
   todoDiv.appendChild(deleteButton);
 
+  todoList.appendChild(todoDiv);
+
 }
