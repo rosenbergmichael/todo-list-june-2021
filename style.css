@@ -80,3 +80,7 @@ form button:hover{
 .delete-btn{
   background: salmon;
 }
+
+.todo-item{
+  padding: 0rem 0.5rem;
+}
