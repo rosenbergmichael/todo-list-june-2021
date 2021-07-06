@@ -35,7 +35,8 @@ const deleteCheck = (e) => {
   const item = e.target;
 
   if(item.classList[0] === 'delete-btn'){
-    item.remove();
+    const todo = item.parentElement;
+    todo.remove();
   }
 }
 
