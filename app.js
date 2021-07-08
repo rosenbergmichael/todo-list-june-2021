@@ -2,6 +2,7 @@
 const todoInput = document.querySelector('.todo-input');
 const todoButton = document.querySelector('.todo-button');
 const todoList = document.querySelector('.todo-list');
+const filterOption = document.querySelector('.filter-todo');
 
 
 // Functions
@@ -46,6 +47,10 @@ const deleteCheck = (e) => {
     const todo = item.parentElement;
     todo.classList.toggle('completed');
   }
+}
+
+const filterTodo = (e) => {
+  const todos = todoList.childNodes;
 }
 
 
