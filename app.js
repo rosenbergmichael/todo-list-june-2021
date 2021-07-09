@@ -17,6 +17,8 @@ const addTodo = (event) => {
   newTodo.classList.add('todo-item');
   todoDiv.appendChild(newTodo);
 
+  saveLocalTodos(todoInput.value);
+
   const completedButton = document.createElement('button');
   completedButton.innerHTML = '<i class="fas fa-check"></i>';
   completedButton.classList.add('complete-btn');
@@ -82,7 +84,7 @@ function saveLocalTodos(todo){
   }else{
     todos = JSON.parse(localStorage.getItem('todos'));
   }
-  
+
   todos.push(todo);
   localStorage.setItem('todos', JSON.stringify(todos));
 }
