@@ -51,6 +51,19 @@ const deleteCheck = (e) => {
 
 const filterTodo = (e) => {
   const todos = todoList.childNodes;
+  todos.forEach((todo) => {
+    switch (e.target.value) {
+      case "all":
+        todo.style.display = "flex";
+        break;
+      case "completed":
+        if (todo.classList.contains("completed")) {
+          todo.style.display = "flex";
+        } else {
+          todo.style.display = "none";
+        }
+    }
+  });
 }
 
 
