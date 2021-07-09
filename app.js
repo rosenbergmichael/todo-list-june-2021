@@ -62,6 +62,12 @@ const filterTodo = (e) => {
         } else {
           todo.style.display = "none";
         }
+      case "notcompleted":
+        if (!todo.classList.contains("completed")) {
+          todo.style.display = "flex";
+        } else {
+          todo.style.display = "none";
+        }
     }
   });
 }
