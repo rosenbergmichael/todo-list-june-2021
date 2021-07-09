@@ -49,24 +49,25 @@ const deleteCheck = (e) => {
   }
 }
 
-const filterTodo = (e) => {
+
+function filterTodo(e) {
   const todos = todoList.childNodes;
-  todos.forEach((todo) => {
-    switch (e.target.value) {
+  todos.forEach(function(todo){
+    switch(e.target.value){
       case "all":
         todo.style.display = "flex";
         break;
       case "completed":
-        if (todo.classList.contains("completed")) {
+        if(todo.classList.contains("completed")){
           todo.style.display = "flex";
-        } else {
+        }else{
           todo.style.display = "none";
         }
         break;
-      case "notcompleted":
-        if (!todo.classList.contains("completed")) {
+      case "uncompleted":
+        if(!todo.classList.contains("completed")){
           todo.style.display = "flex";
-        } else {
+        }else{
           todo.style.display = "none";
         }
         break;
@@ -74,8 +75,21 @@ const filterTodo = (e) => {
   });
 }
 
+function saveLocalTodos(todo){
+  let todos;
+  if(localStorage.getItem('todos') === null){
+    todos = [];
+  }else{
+    todos = JSON.parse(localStorage.getItem('todos'));
+  }
+  
+  todos.push(todo);
+  localStorage.setItem('todos', JSON.stringify(todos));
+}
+
 
 // Event Listeners
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
 filterOption.addEventListener('click', filterTodo);
+
