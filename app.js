@@ -91,7 +91,7 @@ function saveLocalTodos(todo){
 
 function getTodos(){
   let todos;
-  let todos;
+
   if(localStorage.getItem('todos') === null){
     todos = [];
   }else{
