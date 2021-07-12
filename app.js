@@ -121,6 +121,18 @@ function getTodos(){
   });
 }
 
+function removeLocalTodos(todo){
+  let todos;
+
+  if(localStorage.getItem('todos') === null){
+    todos = [];
+  }else{
+    todos = JSON.parse(localStorage.getItem('todos'));
+  }
+  const todoIndex = 
+}
+
+
 // Event Listeners
 document.addEventListener('DOMContentLoaded', getTodos);
 todoButton.addEventListener('click', addTodo);
