@@ -89,6 +89,37 @@ function saveLocalTodos(todo){
   localStorage.setItem('todos', JSON.stringify(todos));
 }
 
+function getTodos(){
+  let todos;
+  let todos;
+  if(localStorage.getItem('todos') === null){
+    todos = [];
+  }else{
+    todos = JSON.parse(localStorage.getItem('todos'));
+  }
+  todos.forEach(function(todo){
+    const todoDiv = document.createElement('div');
+    todoDiv.classList.add('todo');
+
+    const newTodo = document.createElement('li');
+    newTodo.innerText = todo;
+    newTodo.classList.add('todo-item');
+    todoDiv.appendChild(newTodo);
+
+    const completedButton = document.createElement('button');
+    completedButton.innerHTML = '<i class="fas fa-check"></i>';
+    completedButton.classList.add('complete-btn');
+    todoDiv.appendChild(completedButton);
+
+    const deleteButton = document.createElement('button');
+    deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
+    deleteButton.classList.add('delete-btn');
+    todoDiv.appendChild(deleteButton);
+
+    todoList.appendChild(todoDiv);
+
+  });
+}
 
 // Event Listeners
 todoButton.addEventListener('click', addTodo);
